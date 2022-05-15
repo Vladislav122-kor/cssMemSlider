@@ -1,0 +1,158 @@
+body {
+    background: rgb(54, 45, 57);
+}
+
+.container {
+    margin: 0 auto;
+    width: 60vw;
+    height: auto;
+    overflow: hidden;
+}
+
+input {
+    display: none;
+}
+
+.pictures {
+    display: flex;
+    margin-top: 1.5vw;
+    width: 400%;
+}
+
+.picture {
+    width: 25%;
+    transition: all .5s ease;
+    border-radius: 1%;
+}
+
+img {
+    width: 100%;
+    border-radius: 1%;
+}
+
+.elements {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2vw;
+    width: 100%;
+}
+
+.descriptions {
+    width: 50%;
+    font-size: 1.6vw;
+    color: rgb(255, 255, 255);
+    overflow: hidden;
+}
+
+.descriptions-wrap {
+    display: flex;
+    width: 400%;
+    transition: all .5s ease;
+}
+
+.span {
+    width: 25%;
+}  
+
+.labels {
+    display: flex;
+    justify-content: space-between;
+    width: 11vw;
+}
+
+.label-wrap {
+    width: 2vw;
+    height: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.label-wrap:hover .label {
+    background:rgb(112, 112, 112);
+    border: 0.06vw solid rgb(112, 112, 112);
+}
+
+.label-wrap:active .label {
+    transform: translate(15%, 15%);
+}
+
+.label {
+    width: 40%;
+    height: 40%;
+    border: 0.06vw solid rgb(255, 255, 255);
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: all .5s ease;
+}
+
+#radio-1:checked ~ .pictures .radio-1 {
+    margin-left: 0;
+}
+
+#radio-2:checked ~ .pictures .radio-1 {
+    margin-left: -25%;
+}
+
+#radio-3:checked ~ .pictures .radio-1 {
+    margin-left: -50%;
+}
+
+#radio-4:checked ~ .pictures .radio-1 {
+    margin-left: -75%;
+}
+
+#radio-1:checked ~ .elements .descriptions .descriptions-wrap {
+    margin-left: 0;
+}
+
+#radio-2:checked ~ .elements .descriptions .descriptions-wrap {
+    margin-left: -100%;
+}
+
+#radio-3:checked ~ .elements .descriptions .descriptions-wrap {
+    margin-left: -200%;
+}
+
+#radio-4:checked ~ .elements .descriptions .descriptions-wrap {
+    margin-left: -300%;
+}
+
+#radio-1:checked ~ .elements .labels .label-wrap-1 .label-1 {
+    background: none;
+}
+
+#radio-2:checked ~ .elements .labels .label-wrap-2 .label-2 {
+    background: none;
+}
+
+#radio-3:checked ~ .elements .labels .label-wrap-3 .label-3 {
+    background: none;
+}
+
+#radio-4:checked ~ .elements .labels .label-wrap-4 .label-4 {
+    background: none;
+}
+
+@media (max-width: 320px) {
+    .elements {
+        align-items: flex-start;
+        flex-direction: column-reverse;
+        gap: 3vw;
+    }
+
+    .labels {
+        align-self: center;
+        width: 12vw;
+    }
+
+    .label-wrap {
+        width: 1.6vw;
+        height: 2vw;
+    }
+}
