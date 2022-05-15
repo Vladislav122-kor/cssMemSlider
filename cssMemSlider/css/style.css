@@ -39,8 +39,8 @@ img {
 }
 
 .descriptions {
-    width: 40%;
-    font-size: 1.3vw;
+    width: 50%;
+    font-size: 1.6vw;
     color: rgb(255, 255, 255);
     overflow: hidden;
 }
@@ -58,7 +58,7 @@ img {
 .labels {
     display: flex;
     justify-content: space-between;
-    width: 15%;
+    width: 11vw;
 }
 
 .label-wrap {
@@ -71,6 +71,15 @@ img {
     cursor: pointer;
 }
 
+.label-wrap:hover .label {
+    background:rgb(112, 112, 111);
+    border: 0.06vw solid rgb(112, 112, 111);
+}
+
+.label-wrap:active .label {
+    transform: translate(15%, 15%);
+}
+
 .label {
     width: 40%;
     height: 40%;
@@ -78,6 +87,8 @@ img {
     background: white;
     border-radius: 50%;
     cursor: pointer;
+    box-sizing: border-box;
+    transition: all .5s ease;
 }
 
 #radio-1:checked ~ .pictures .radio-1 {
@@ -128,7 +139,20 @@ img {
     background: none;
 }
 
-.label-wrap:hover .label {
-    background:rgb(112, 112, 111);
-    border: 0.06vw solid rgb(112, 112, 111);
+@media (max-width: 320px) {
+    .elements {
+        align-items: flex-start;
+        flex-direction: column-reverse;
+        gap: 3vw;
+    }
+
+    .labels {
+        align-self: center;
+        width: 12vw;
+    }
+
+    .label-wrap {
+        width: 1.6vw;
+        height: 2vw;
+    }
 }
