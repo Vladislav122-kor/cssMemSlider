@@ -129,6 +129,6 @@ img {
 }
 
 .label-wrap:hover .label {
-    background:rgb(112, 112, 112);
-    border: 0.06vw solid rgb(112, 112, 112);
+    background:rgb(112, 112, 111);
+    border: 0.06vw solid rgb(112, 112, 111);
 }
